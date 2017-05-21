@@ -1,0 +1,32 @@
+html {
+    background-color: #211934;
+}
+
+body {
+    width: 80%;
+    border: 1px solid white;
+    color: #ccc;
+    margin: 0 auto;
+}
+
+#nav {
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    h1 {
+        font-family: 'Montserrat Subrayada', sans-serif;
+        color: #59D1e7;
+        flex-grow: 1;
+
+        i {
+            color: #ed7799;
+            margin-right: 20px;
+        }
+    }
+
+    form {
+    
+    }
+}
