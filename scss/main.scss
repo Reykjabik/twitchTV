@@ -1,32 +1,139 @@
+$bg-color: #211934;
+$secondary-purple: #734aa4;
+
+$main-blue: #59D1e7;
+$secondary-blue: #3ea3e2;
+
+$main-pink: #ed7799;
+$secondary-pink: #E1A3C8;
+
+$main-orange: #fba769;
+
+$montserrat-font: 'Montserrat Subrayada', sans-serif;
+$abel-font: 'Abel', sans-serif;
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+* {box-sizing: border-box;}
+
 html {
-    background-color: #211934;
+    background-color: $bg-color;
 }
 
 body {
     width: 80%;
-    border: 1px solid white;
     color: #ccc;
     margin: 0 auto;
+    font-family: $abel-font;
+}
+
+a {
+    text-decoration: none; 
+    color: white;
+}
+
+h4 {
+    text-align: center;   
 }
 
 #nav {
 
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     align-items: baseline;
 
     h1 {
-        font-family: 'Montserrat Subrayada', sans-serif;
-        color: #59D1e7;
+        
+        font-family: $montserrat-font;
+        color: $main-blue;
         flex-grow: 1;
+        padding-top: 20px;
+        font-size: 3em;
+        text-shadow: 0 0 15px $secondary-blue;
+        transition: text-shadow 3s ease-in-out;
 
         i {
-            color: #ed7799;
+            color: $main-pink;
             margin-right: 20px;
         }
     }
 
-    form {
-    
+    #searchbox {
+        width: 200px;
+        padding: 5px;
+        background-color: $bg-color;
+        font-size: 1.2em;
+        font-family: $abel-font;
+        border: none;
+        color: white;
+    }
+}
+
+#filter {
+
+    #tabs {
+
+        @include flex-row;
+
+        .tab {
+            height: 70px;
+            background: linear-gradient(-45deg, $secondary-blue, $main-blue);
+            flex-grow: 1;
+            padding: 0 0 7px 7px;
+            
+            h3 {
+                color: white;
+                font-size: 2em;
+                font-family: $abel-font;
+                margin: 10px 0 7px 7px;
+            } 
+            &:hover {
+                box-shadow: 0 0 10px 5px $main-orange;
+            }        
+        }
+        .tab:not(#tab1) {
+                margin-left: 10px;
+        }
+        .selected {
+            border: 5px solid $main-orange;
+        }
+    }
+}
+
+#resultsList {
+
+    padding: 0;
+    list-style: none;
+    @include flex-row;
+    flex-wrap: wrap;
+    font-family: $abel-font;
+
+
+    .result {
+
+        height: 100px;
+        background: linear-gradient(15deg, $secondary-purple, $main-orange);
+        flex-basis: 49%;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        img {
+            border-radius: 50%;
+            height: 70%;
+            margin: 0 12px;
+            border: 2px solid $main-orange;
+        }
+
+        p {
+            padding: 0 10px;
+        }
+
+        &:hover {
+            box-shadow: 0 0 10px 5px $secondary-blue;
+        }  
     }
 }

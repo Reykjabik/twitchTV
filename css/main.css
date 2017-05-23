@@ -1,22 +1,89 @@
+* {
+  box-sizing: border-box; }
+
 html {
   background-color: #211934; }
 
 body {
   width: 80%;
-  border: 1px solid white;
   color: #ccc;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: "Abel", sans-serif; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+h4 {
+  text-align: center; }
 
 #nav {
   display: flex;
   flex-direction: row;
   align-items: baseline; }
   #nav h1 {
-    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: "Montserrat Subrayada", sans-serif;
     color: #59D1e7;
-    flex-grow: 1; }
+    flex-grow: 1;
+    padding-top: 20px;
+    font-size: 3em;
+    text-shadow: 0 0 15px #3ea3e2;
+    transition: text-shadow 3s ease-in-out; }
     #nav h1 i {
       color: #ed7799;
       margin-right: 20px; }
+  #nav #searchbox {
+    width: 200px;
+    padding: 5px;
+    background-color: #211934;
+    font-size: 1.2em;
+    font-family: "Abel", sans-serif;
+    border: none;
+    color: white; }
+
+#filter #tabs {
+  display: flex;
+  flex-direction: row; }
+  #filter #tabs .tab {
+    height: 70px;
+    background: linear-gradient(-45deg, #3ea3e2, #59D1e7);
+    flex-grow: 1;
+    padding: 0 0 7px 7px; }
+    #filter #tabs .tab h3 {
+      color: white;
+      font-size: 2em;
+      font-family: "Abel", sans-serif;
+      margin: 10px 0 7px 7px; }
+    #filter #tabs .tab:hover {
+      box-shadow: 0 0 10px 5px #fba769; }
+  #filter #tabs .tab:not(#tab1) {
+    margin-left: 10px; }
+  #filter #tabs .selected {
+    border: 5px solid #fba769; }
+
+#resultsList {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: "Abel", sans-serif; }
+  #resultsList .result {
+    height: 100px;
+    background: linear-gradient(15deg, #734aa4, #fba769);
+    flex-basis: 49%;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none; }
+    #resultsList .result img {
+      border-radius: 50%;
+      height: 70%;
+      margin: 0 12px;
+      border: 2px solid #fba769; }
+    #resultsList .result p {
+      padding: 0 10px; }
+    #resultsList .result:hover {
+      box-shadow: 0 0 10px 5px #3ea3e2; }
 
 /*# sourceMappingURL=main.css.map */

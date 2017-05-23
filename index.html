@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 
-        <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Abel" rel="stylesheet"> 
     </head>
     <body>
         <div id="nav">
             <h1><i class="fa fa-television" aria-hidden="true"></i>TwitchTV</h1>
             <form>
-                <input type="text" />
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input id="searchbox" type="text" placeholder="What are you looking for?"/>
             </form>
         </div>
         <div id="filter">
             <p>Filter</p>
-            <div></div>
+            <div id="tabs">
+                <div class="tab selected" id="tab1">
+                    <h3>All</h3>
+                </div>
+                <div class="tab" id="tab2">
+                    <h3>Online</h3>
+                </div>
+                <div class="tab" id="tab3">
+                    <h3>Offline</h3>
+                </div>
+            </div>
         </div>
         <div id="results">
             <p>Results</p>
-            <div></div>
+            <div>
+                <ul id="resultsList">
+                    
+                </ul>
+            </div>
         </div>
+
+        <h4> Coded by <a href="https://reykjabik.github.io">Javier Espín</a> 2017 </h4>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
